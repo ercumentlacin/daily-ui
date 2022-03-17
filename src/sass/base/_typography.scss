@@ -1,0 +1,16 @@
+a {
+  transition: color 0.2s ease-in-out;
+  color: var(--color--primary);
+
+  &:hover {
+    color: var(--color--primary-lighten-10);
+  }
+}
+
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}

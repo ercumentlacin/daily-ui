@@ -1,0 +1,6 @@
+@use "functions" as *;
+
+.container {
+  width: min(calc(100% - 2rem), rem(992));
+  margin-inline: auto;
+}

@@ -1,0 +1,9 @@
+@use "sass:math" as *;
+
+@function rem($px) {
+  @return div($px, 16) + rem;
+}
+
+@function color($color-name) {
+  @return var(#{$color-name});
+}

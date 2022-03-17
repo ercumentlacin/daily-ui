@@ -1,0 +1,29 @@
+@use "sass:color" as color;
+
+:root {
+  --gray: hsl(223deg 15% 18%);
+  --gold: hsl(33deg 50% 69%);
+  --white-dark: hsl(0deg 0% 81%);
+  --white: hsl(0deg 0% 100%);
+  --green: hsl(143deg 40% 25%);
+
+  @media (prefers-color-scheme: dark) {
+    --color--primary: var(--gold);
+    --color--primary-lighten-10: #{color.adjust(
+        hsl(33deg 50% 69%),
+        $lightness: 10%
+      )};
+    --color--background: var(--gray);
+    --color--foreground: var(--white-dark);
+  }
+
+  @media (prefers-color-scheme: light) {
+    --color--primary: var(--green);
+    --color--primary-lighten-10: #{color.adjust(
+        hsl(143deg 40% 25%),
+        $lightness: 10%
+      )};
+    --color--background: var(--white);
+    --color--foreground: var(--gray);
+  }
+}
